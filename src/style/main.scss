@@ -10,9 +10,28 @@
 
 .library {
     flex-grow: 2;
-    width: 70%;
+    width: 62%;
+    height: 100vh;
     padding: 6rem;
     z-index: 1;
+}
+
+.schedule {
+    flex-grow: 1;
+    background: linear-gradient(118.95deg, #6F48CE 0%, #32CBE8 100%);
+    width: 38%;
+    height: 100vh;
+    text-align: center;
+    padding: 12rem 6rem;
+}
+
+.schedule_header {
+    border: none;
+    border-left: 1px solid white;
+    color:white;
+    font-size: 20px;
+    font-family: 'Alegreya', serif;
+    line-height: 27px;
 }
 
 .library_header {
@@ -26,16 +45,11 @@
     line-height: 47px;
 }
 
-.schedule {
-    flex-grow: 1;
-    width: 30%;
-    background: linear-gradient(118.95deg, #6F48CE 0%, #32CBE8 100%)
-}
-
 ul {
     list-style-type: none;
     margin: 0 25px;
     padding: 0;
+    width: 120%;
 }
 
 ul li {
@@ -46,11 +60,13 @@ ul li {
     padding-right: 25px;
 }
 
+
 .course_title {
     color: #4D4D4D;
     font-family: Lato;
     font-size: 16px;
 }
+
 
 .course_description {
     width: 60%;
@@ -63,20 +79,6 @@ ul li {
     font-size: 16px;
     font-weight: bold;
     line-height: 22px;
-}
-
-.slot_course {
-    background-color: white;
-    color: black;
-    border: 1px solid rgba(255,255,255,0.6);
-}
-
-.slot_empty {
-    opacity: 0.75;
-    background-color: transparent;
-    border: 1px solid rgba(255,255,255,0.6);
-    border-style: dashed;
-    color: white;
 }
 
 .show-content {
