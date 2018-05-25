@@ -13,8 +13,8 @@ class Schedule extends Component {
     renderCourse(course) {
         return (
             <div key={this.props.courses.indexOf(course)} className={`slot ${course.enrolled ? 'slot_course' : 'slot_empty'}`}>
-                <div className="slot_title">{course.enrolled ? course.title : 'Empty Slot'}</div>
-                <a className={`action slot_remove ${course.enrolled ? 'show-content' : 'hide-content'}`} onClick={() => this.props.removeCourse(course)}>remove course</a>
+                <div>{course.enrolled ? course.title : 'Empty Slot'}</div>
+                <a className={`action slot_remove`} onClick={() => this.props.removeCourse(course)}>remove course</a>
             </div>
         )
     }
