@@ -24,6 +24,13 @@ class Schedule extends Component {
             <div>
                 <div className="schedule_slots">
                     {
+
+                        //filter out our course instances that we are not enrolled in.
+
+                        //ordering
+
+                        //empty slots
+
                         this.props.courses.map(this.renderCourse)
                     }
                 </div>
@@ -33,8 +40,14 @@ class Schedule extends Component {
 }
 
 function mapStateToProps(state) {
-    return { courses: state.courses };
-}
+    var enrolledCourses = []
+    state.courses.map((course) => {
+        if(course.enrolled) {
+            enrolledCourses.push(course);
+        }
+    })
+    return { courses: enrolledCourses };
+ }
 
 function mapDispatchToProps(dispatch) {
     return {
